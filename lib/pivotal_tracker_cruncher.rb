@@ -35,8 +35,8 @@ class PivotalTrackerCruncher
       req.url "/services/v5/projects/#{project_id}/stories?&with_state=unstarted"
       req.headers['X-TrackerToken'] = @token
     end
-    story_data = JSON.parse(response.body)
-    story_data.each do |story|
+    stories = JSON.parse(response.body)
+    stories.each do |story|
       puts story['name']
     end
   end
