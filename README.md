@@ -19,4 +19,24 @@ https://www.pivotaltracker.com/help/api (requires use of HTTP header for authent
 2. List the stories in a project (https://www.pivotaltracker.com/help/api/rest/v5#Stories)
 3. Show the details of a specific story (https://www.pivotaltracker.com/help/api/rest/v5#Story)
 
+++++++++++++++
 
+# Let's get these guys working!
+
+## Weather Cruncher
+
+* fork, clone, bundle install
+* in terminal:
+
+    $ irb
+    > require '<path of weather_cruncher.rb>'
+    > weather = WeatherCruncher.new
+    > weather.current_weather(Denver)
+
+Displays current weather conditions in Denver.
+
+    > weather.forcast_7_day(Denver)
+
+Displays 7 day forecast for Denver.
+
+## Pivotal Tracker Cruncher
