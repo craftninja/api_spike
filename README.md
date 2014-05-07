@@ -40,3 +40,21 @@ Displays current weather conditions in Denver.
 Displays 7 day forecast for Denver.
 
 ## Pivotal Tracker Cruncher
+
+* fork, clone, bundle install (unless you already did for the Weather Cruncher)
+* in terminal:
+
+    $ irb
+    > require '<path of pivotal_tracker_cruncher.rb>'
+    > ptc = PivotalTrackerCruncher.new('<api token>')
+    > ptc.list_projects
+    > ptc.list_unstarted_stories(<project number>)
+    > ptc.list_details_of_story(<project number>, <story number>)
+
+### Oh Hey! Remember that you totally SHOULD NOT push your api token! Maybe save that in a .env file that is added to your .gitignore file.
+
+* Check out that .env.example file... copy that to a .env file, add your api token for Pivotal Tracker, and create a .gitignore file with the contents being:
+
+    .env
+
+Hooray! Secret token safe, and working code.
